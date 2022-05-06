@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Syncopate';
+    @apply text-white;
+  }
+}
+
+@layer components {
+  /* Mobile Sidebar */
+  .mobile-sidebar {
+    background: linear-gradient(
+      180deg,
+      #03041a -6.35%,
+      #03041add 75%,
+      #03041a00 100%
+    );
+  }
+
+  /* Navbar actived link animation*/
+  .nav_link {
+    @apply relative hover:scale-110 cursor-pointer before:opacity-0 hover:before:opacity-100 before:block hover:before:absolute before:-bottom-[10px] before:w-[18px] before:h-[2px] before:bg-[#CB1E8DAA] hover:text-transparent hover:bg-clip-text hover:bg-gradient-to-r hover:from-[#CB1E8D] hover:to-[#FFE08D] hover:animate-pulse;
+  }
+
+  .sidebar_link {
+    @apply relative cursor-pointer py-[10px] hover:bg-black hover:bg-opacity-50 transition-all duration-100 hover:text-[20px];
+  }
+
+  header .nav_link_active {
+  }
+
+  .roadbar {
+    animation-name: roadbar;
+    animation-duration: 15s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes roadbar {
+    0% {
+      height: 0px;
+    }
+    100% {
+      height: 2000px;
+    }
+  }
+
+  .mint-form .mint-now {
+    background: linear-gradient(238.21deg, #ffe08d -6.35%, #cb1e8d 80.89%);
+  }
+  .mint-from .mint-now:hover {
+    background: linear-gradient(238.21deg, #cb1e8d -6.35%, #ffe08d 80.89%);
+  }
+
+  .whiteAlpha {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.145) 0%,
+      rgba(255, 255, 255, 0.06) 55.97%,
+      rgba(255, 255, 255, 0.215) 116.81%
+    );
+    backdrop-filter: blur(5px);
+  }
+
+  .utility-circle-up {
+    background: linear-gradient(
+      180deg,
+      #3883d333 0%,
+      #3883d399 31.77%,
+      #8252c3 77.08%,
+      #a53b3299 100%
+    );
+  }
+
+  .utility-circle-down {
+    background: linear-gradient(
+      0deg,
+      #4462a999 0%,
+      #6b55a5 31.77%,
+      #8d4aa299 77.08%,
+      #ac409f99 100%
+    );
+  }
+
+  .specHeading .backTitle {
+    color: black;
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #cb1e8d;
+  }
+
+  .gra1 {
+    background: linear-gradient(238.21deg, #ffe08d -6.35%, #cb1e8d 80.89%);
+  }
+
+  .roadmap .item-active {
+    background: linear-gradient(238.21deg, #ffe08d -6.35%, #cb1e8d 80.89%);
+  }
+
+  .animate-tape .animation-content-gradient {
+    animation-name: animation_tape_gradient;
+    animation-duration: 20s;
+    animation-iteration-count: infinite;
+  }
+
+  .animate-tape .animation-content-white {
+    animation-name: animation_tape_white;
+    animation-duration: 38s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes animation_tape_gradient {
+    0% {
+      transform: translateX(-275vw);
+    }
+    20% {
+      transform: translateX(275vw);
+    }
+    50% {
+      transform: translateX(275vw);
+    }
+    70% {
+      transform: translateX(-275vw);
+    }
+    100% {
+      transform: translateX(-275vw);
+    }
+  }
+
+  @keyframes animation_tape_white {
+    0% {
+      transform: translateX(275vw);
+    }
+    20% {
+      transform: translateX(-275vw);
+    }
+    50% {
+      transform: translateX(-275vw);
+    }
+    70% {
+      transform: translateX(275vw);
+    }
+    100% {
+      transform: translateX(275vw);
+    }
+  }
+
+  .ags-box-animation .box-to-left {
+    animation-name: animate_to_left;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+  }
+
+  .ags-box-animation .box-to-right {
+    animation-name: animate_to_right;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes animate_to_left {
+    0% {
+      transform: translateX(-200vw);
+    }
+    40% {
+      transform: translateX(-50vw);
+    }
+    50% {
+      transform: translateX(-50vw);
+    }
+    90% {
+      transform: translateX(-200vw);
+    }
+    100% {
+      transform: translateX(-200vw);
+    }
+  }
+
+  @keyframes animate_to_right {
+    0% {
+      transform: translateX(-100vw);
+    }
+    40% {
+      transform: translateX(-250vw);
+    }
+    50% {
+      transform: translateX(-250vw);
+    }
+    90% {
+      transform: translateX(-100vw);
+    }
+    100% {
+      transform: translateX(-100vw);
+    }
+  }
+}
+.bn-onboard-modal {
+  z-index: 10;
+}
